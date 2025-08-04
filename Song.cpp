@@ -32,14 +32,14 @@ string Song::getArtist() const { return artist; }
 int Song::getDuration() const { return duration; }
 
 void Song::display() const {
-    cout << "" " << title << " "" << "by " << artist << " [" << duration << " sec]" << endl;
+    cout << getTitle() << " by " << getArtist() << " [" << getDuration() << " sec]" << endl;
 }
 
 void Song::display(bool fullInfo) const {
     if (fullInfo) {
         display();
     } else {
-        cout << "" " << title << " "" << " by " << artist << endl;
+        cout << getTitle() << " by " << getArtist() << endl;
     }
 }
 
@@ -48,6 +48,6 @@ bool Song::operator==(const Song& other) const {
 }
 
 ostream& operator<<(ostream& os, const Song& song) {
-    os << "" " << song.title << " "" << " by " << song.artist << " [" << song.duration << " sec]";
+    os << song.getTitle() << " by " << song.getArtist() << " [" << song.getDuration() << " sec]";
     return os;
 }

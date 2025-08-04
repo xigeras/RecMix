@@ -1,6 +1,6 @@
 #include "Playlist.h"
 
-Playlist::Playlist() : name("") {}
+Playlist::Playlist(string playlistName) : name(playlistName) {}
 
 Playlist::Playlist(string playlistName, const vector<Song>& songList) {
     name = playlistName;
