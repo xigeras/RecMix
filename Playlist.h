@@ -15,9 +15,10 @@ class Playlist {
     public:
         Playlist();
         Playlist(string playlistName, const vector<Song>& songList);
+        Playlist(string playlistName);
 
         void setName(string playlistName);
-        string getName() const; //setter and getter for name
+        string getName() const;
         
  
         void addSong(const Song& song);
